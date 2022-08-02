@@ -1,6 +1,7 @@
 var after = "";
 
 function fetchAniMemes() {
+         colorchange();
 
   if (document.getElementById("memes")) {
     document.getElementById("memes").remove();
