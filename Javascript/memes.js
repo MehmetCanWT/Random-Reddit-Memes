@@ -1,6 +1,6 @@
 var after = "";
 
-function fetchHentai() {
+function fetchMemes() {
   colorchange();
 
   if (document.getElementById("memes")) {
@@ -9,7 +9,7 @@ function fetchHentai() {
 
   let parentdiv = document.createElement("div");
   parentdiv.id = "memes";
-  fetch(`https://www.reddit.com/r/hentai.json?after=${after}&include_over_18=on`)
+  fetch(`https://www.reddit.com/r/memes.json?after=${after}&include_over_18=on`)
     .then((response) => response.json())
     .then((body) => {
       after = body.data.after;
