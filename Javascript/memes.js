@@ -9,7 +9,7 @@ function fetchMemes() {
 
   let parentdiv = document.createElement("div");
   parentdiv.id = "memes";
-  fetch(`https://www.reddit.com/r/memes.json?after=${after}`)
+  fetch(`https://www.reddit.com/r/memes.json?include_over_18=on&after=${after}`)
     .then((response) => response.json())
     .then((body) => {
       after = body.data.after;
